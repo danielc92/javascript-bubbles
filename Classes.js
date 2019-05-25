@@ -11,7 +11,8 @@ class Bubble {
     
     // Constructor sets properties of instance of Bubble
     constructor (x, y) {
-        this.x = x
+        this.x = x;
+        this.y = y;
     }
 
     // changes the coordinate for Bubble instance with a random offset in x and y
@@ -21,7 +22,10 @@ class Bubble {
     }
 
     show() {
-        
+        stroke(255);
+        strokeWeight(4);
+        noFill();
+        ellipse(this.x, this.y, 15, 15);
     }
 }
 
