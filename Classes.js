@@ -1,3 +1,7 @@
+function setup() {
+    
+}
+
 class Bubble {
     
     // Constructor sets properties of instance of Bubble
