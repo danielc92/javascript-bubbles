@@ -1,10 +1,16 @@
 function setup() {
     // p5.js function to create a canvas
     createCanvas(800, 800);
+    b1 = new Bubble(100, 200);
 }
 
 function draw() {
-
+    background(0);
+    b1.show();
+    b1.move();
+    b1.show();
+    b1.move();
+    b1.show();
 }
 
 class Bubble {
