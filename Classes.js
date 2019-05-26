@@ -1,22 +1,23 @@
+let bubbles_array = [];
+
 function setup() {
     // p5.js function to create a canvas
     createCanvas(800, 800);
-    b1 = new Bubble(100, 200);
-    b2 = new Bubble(200, 409);
+
+    // Creating bubble instance of different radius and coordinates
+    bubbles_array[0] = new Bubble(600, 150, 50);
+    bubbles_array[1] = new Bubble(100, 550, 60);
+    bubbles_array[2] = new Bubble(200, 200, 23);
 }
 
 function draw() {
     background(0);
-    b1.show();
-    b1.move();
-    b1.show();
-    b1.move();
-    b1.show();
-    b2.show();
-    b2.move();
-    b2.show();
-    b2.move();
-    b2.show();
+    
+    for (let index = 0; index < bubbles_array.length ; index ++) {
+        bubbles_array[index].move();
+        bubbles_array[index].show();
+    }
+
 }
 
 class Bubble {
