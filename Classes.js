@@ -1,14 +1,24 @@
 let bubbles_array = [];
+let number_of_bubbles = 10;
+
 
 function setup() {
     // p5.js function to create a canvas
     createCanvas(800, 800);
-
+    print(height);
     // Creating bubble instance of different radius and coordinates
-    bubbles_array[0] = new Bubble(600, 150, 50);
-    bubbles_array[1] = new Bubble(100, 550, 60);
-    bubbles_array[2] = new Bubble(200, 200, 23);
+    for (let index = 0; index <= number_of_bubbles; index ++) {
+        x_pos = random(width);
+        y_pos = random(height);
+        radius = random(10,60);
+        bubbles_array[index] = new Bubble(x_pos, y_pos, radius)
+    }
+
+    // bubbles_array[0] = new Bubble(600, 150, 50);
+    // bubbles_array[1] = new Bubble(100, 550, 60);
+    // bubbles_array[2] = new Bubble(200, 200, 23);
 }
+
 
 function draw() {
     background(0);
@@ -19,6 +29,7 @@ function draw() {
     }
 
 }
+
 
 class Bubble {
     
